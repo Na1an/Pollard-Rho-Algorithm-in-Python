@@ -22,7 +22,8 @@ def FactorBase(longeur=5):
         else: 
             return T
 
-def ChoisieDesQ(n,taille=100):
+def ChoisieDesQ(n,taille = 100):
+    
     Q = lambda x: (x+int(math.sqrt(n)))**2-n
     T = []
     for i in range(1,taille):
@@ -264,7 +265,7 @@ if __name__ == '__main__':
     print("S :",S)
    
     # (3) Choisie des Q(x)
-    T = ChoisieDesQ(n)
+    T = ChoisieDesQ(n,10000)
 
     # (4) Tamis Quadratique (Quadratic sieve)
     M,X = QuadraticSieve(T,S) # M est la matrice de 
